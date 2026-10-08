@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apex-headtrack"
+version = "0.1.0"
+description = "Webcam head pose tracking for racing games through OpenTrack"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+license = {text = "MIT"}
+dependencies = ["mediapipe>=0.10.14,<0.11", "opencv-python>=4.9,<5", "numpy>=1.26,<3", "pynput>=1.7,<2"]
+
+[project.scripts]
+apex-headtrack = "apex_headtrack.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
